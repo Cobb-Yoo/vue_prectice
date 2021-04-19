@@ -53,3 +53,29 @@ App.vue를 통해서 우리한테 보여짐
 template에 있는 <Header/>는 components를 참조한뒤 import를 참조하여 해당 위치에 있는 값을 가져옴
 
 https://youtu.be/sqH0u8wN4Rs?t=1232
+
+===========
+
+3일차
+
+기본적인 레이아웃에 대한 이해를 마침
+
+router의 기본적인 형태알게 됨. 정의는 router.js에서 진행하고 사용하는 것은 main.js에서 진행
+router.js 에서 export default router를 하지 않아서 시간을 많이 씀.
+
+결국은 vue의 제일 중요한 부분은 데이터 핸들링이다.
+
+vue에서는 데이터의 바인딩을 v-model로 할 수 있으며
+
+vue에서는 onClick말고 @click으로 바인딩을 진행하고 2way 바인딩을 진행한다.
+
+모든 함수는 methods에서 선언한다.
+
+watch라는 중요한 개념이 있다.
+우리가 정의한 데이터를 watch 내에서 메서드 형식으로 만들게 되면 해당하는 데이터가 변하게 된다면 변화되는것을 알 수 있다.
+
+v-for를 사용하여 반복문을 사용할 수 있음.
+
+- v-if와 v-show의 차이
+  v-if는 조건을 만족할 때만 렌더링을 진행하고
+  v-show는 조건에 상관없이 렌더링을 진행하고 보였다, 안보였다만 변화한다.
