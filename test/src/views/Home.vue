@@ -3,9 +3,11 @@
         <h1> Welcome slave!</h1>
         <input type="text" v-model="input" @keyup.enter="addData"/>
 
-        <table class="table table-bordered" v-if="tableShow">
-            <tr :key="i" :value="d.v" v-for="(d,i) in options">
-                <td>{{d.t}}</td>
+        <table class="table table-bordered">
+            <tr :key="d" v-for="(d,i) in options">
+                <td>{{d}}</td>
+                <td>{{i}}</td>
+                <button @click="removeData(i,d)">삭제</button>
             </tr>
         </table>
     </div>
@@ -14,16 +16,27 @@
 export default {
     data(){
         return{
-            input: "",
-            options:[],
-            tableShow: true
+            options:[]
         };
+    },
+    created(){
+        if(localStorage.length > 0){
+            for(var i=0;i< localStorage.length;i++){
+                this.options.push(localStorage.key(i));
+            }
+        }
     },
     methods:{
         addData(){
-            this.options.push({t: this.input});
-            localStorage.setItem(this.newTodoItem, this.input);
-            this.input = "";
+            if(this.input !== ''){
+                this.options.push({t: this.input});
+                localStorage.setItem(this.input, this.input);
+                this.input = "";
+            }
+        },
+        removeData(index, data){
+            localStorage.removeItem(data);
+            this.options.splice(index,1);
         }
     },
 };
