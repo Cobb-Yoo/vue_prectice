@@ -1,6 +1,6 @@
 react가 javascript에 대한 지식이 많이 필요하기 때문에 이번엔 vue를 공부하기로 함.
 
-===========
+---
 
 1일차
 
@@ -22,7 +22,7 @@ spa(single page application)
 
 https://youtu.be/sqH0u8wN4Rs?t=593
 
-===========
+---
 
 2일차
 
@@ -54,7 +54,7 @@ template에 있는 <Header/>는 components를 참조한뒤 import를 참조하�
 
 https://youtu.be/sqH0u8wN4Rs?t=1232
 
-===========
+---
 
 3일차
 
@@ -80,7 +80,7 @@ v-for를 사용하여 반복문을 사용할 수 있음.
   v-if는 조건을 만족할 때만 렌더링을 진행하고
   v-show는 조건에 상관없이 렌더링을 진행하고 보였다, 안보였다만 변화한다.
 
-===========
+---
 
 4일차
 
